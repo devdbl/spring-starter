@@ -26,6 +26,6 @@ public class Employee {
     }
 
     public boolean isOfAge(Integer age) {
-        return this.age > age;
+        return this.age >= age;
     }
 }
