@@ -1,4 +1,4 @@
-package ch.abbts.ndsswe.swd.springstarter;
+package ch.abbts.nds.swe.swd.springstarter;
 
 
 import org.springframework.context.annotation.Bean;
@@ -20,7 +20,7 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/employees/**").permitAll()
+                .antMatchers("/empty/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .httpBasic();
