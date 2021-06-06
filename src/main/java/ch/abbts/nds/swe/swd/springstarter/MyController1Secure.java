@@ -1,4 +1,4 @@
-package ch.abbts.ndsswe.swd.springstarter;
+package ch.abbts.nds.swe.swd.springstarter;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,8 +8,8 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/employees")
-public class MyController1 {
+@RequestMapping(path = "/employees-secure")
+public class MyController1Secure {
   @GetMapping(path = "/", produces = "application/json")
   public List<String> employees() {
     return Arrays.asList(new String[]{
@@ -17,7 +17,8 @@ public class MyController1 {
         "Edmund Hillary",
         "These names",
         "should never be available",
-        "to anonymous users!"
+        "to anonymous users!",
+        "test entry"
     });
   }
 }
