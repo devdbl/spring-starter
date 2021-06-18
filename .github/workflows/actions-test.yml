@@ -2,12 +2,12 @@ name: The most simple action ever
 
 on:
   push:
-    paths: 
-     - .github/workflows/actions-test.yml
+    branches:
+      - main
 
 jobs:
   print-stuff:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Actions are amazing"
-      - run: echo "They run when you push and on many other occasions"
+      - run: echo "Hello I am the first action"
