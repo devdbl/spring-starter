@@ -8,17 +8,15 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/employees-secure")
+@RequestMapping(path = "/employees")
 public class EmployeesController {
   @GetMapping(path = "/", produces = "application/json")
   public List<String> employees() {
     return Arrays.asList(new String[]{
         "Tenzing Norgay",
         "Edmund Hillary",
-        "These names",
-        "should never be available",
-        "to anonymous users!",
-        "test entry"
+        "Markus Muster",
+        "Hans Mann"
     });
   }
 }
